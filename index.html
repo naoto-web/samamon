@@ -244,6 +244,15 @@
     border-radius: 999px; padding: 10px 20px; z-index: 200; transition: transform .3s; max-width: 90%;
   }
   #toast.show { transform: translateX(-50%) translateY(0); }
+
+  /* バトル中の実況はフィールド中央（敵と自分の間の空白）に出す。
+     下部だとターン終了直後に技ボタンへ被るため（先生フィードバック 2026-07-14） */
+  #screen-battle.active ~ #toast {
+    top: 40%; bottom: auto; pointer-events: none;
+    transform: translateX(-50%) translateY(8px); opacity: 0;
+    transition: transform .3s, opacity .3s;
+  }
+  #screen-battle.active ~ #toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 </style>
 
 
