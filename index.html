@@ -89,7 +89,8 @@
     width: 100px; height: 100px; border-radius: 50%; border: 4px solid; flex-shrink: 0;
     padding: 6px; overflow: hidden;
   }
-  #b-player { margin-top: 4px; }
+  /* 自分側は下（メッセージ窓の上）に寄せ、敵との間に余白を作って対峙構図にする（先生フィードバック: 2体が近すぎる） */
+  #b-player { margin-top: auto; padding-top: 10px; }
   .b-hpnum { font-size: 12px; color: #607089; text-align: right; margin-top: 3px; font-weight: bold; }
 
   .ail {
@@ -103,7 +104,7 @@
   .hpfill.low { background: #ef5350; }
 
   #battle-msg {
-    margin-top: auto; background: #23395d; color: #fff; border: 3px solid #fff; border-radius: 14px;
+    margin-top: 12px; background: #23395d; color: #fff; border: 3px solid #fff; border-radius: 14px;
     min-height: 64px; padding: 12px 14px; font-size: 15px; line-height: 1.55; cursor: pointer;
     box-shadow: 0 3px 8px rgba(0,0,0,.2); position: relative;
   }
